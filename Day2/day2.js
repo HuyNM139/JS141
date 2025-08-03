@@ -8,6 +8,12 @@ convertButton.addEventListener("click", function() {
     div.innerText = inputText.value.toUpperCase()
     resultText.appendChild(div)
     emptyString.push(inputText.value.toUpperCase())
-    localStorage.setItem("input",JSON.stringify(emptyString))
+    let textFromLocalStorage = JSON.parse(localStorage.getItem("input"))
+    if (textFromLocalStorage === null) {
+        textFromLocalStorage =  []
+    }
+    textFromLocalStorage.push(inputText.value.toUpperCase())
+    localStorage.setItem("input",JSON.stringify(textFromLocalStorage))
+    //localStorage.setItem("input",JSON.stringify(emptyString))
     inputText.value = ""
 })
