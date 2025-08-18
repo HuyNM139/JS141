@@ -8,14 +8,6 @@
 <body>
     <h1>Thông tin đã nhập</h1>
     <ul id="list"></ul>
-    <script>
-        const data = JSON.parse(localStorage.getItem("input")) || [];
-        const listElement = document.getElementById("list");
-        data.forEach(item => {
-            const li = document.createElement("li");
-            li.innerText = item;
-            listElement.appendChild(li);
-        });
-    </script>
+    <script src="newpage.js"></script>
 </body>
 </html>
