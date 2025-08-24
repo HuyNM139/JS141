@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-image 0.5s ease;
+    background-size: cover;
+    background-position: center;
+  }
+  #weather-info {
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  #history {
+    max-width: 600px;
+  }
+  .history-item {
+    padding: 8px;
+    background: #f0f0f0;
+    margin: 4px 0;
+  }
+  #search-form {
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<h1>Weather App</h1>
+
+<!-- Form tìm kiếm địa điểm -->
+<form id="search-form">
+  <input type="text" id="location-input" placeholder="Enter location" required />
+  <button type="submit">Search</button>
+</form>
+
+<!-- Thông tin thời tiết -->
+<div id="weather-info">
+  <h2 id="location-name"></h2>
+  <p>Temperature: <span id="temp"></span>°C</p>
+  <p>Wind Speed: <span id="wind"></span> km/h</p>
+</div>
+
+<!-- Phần lịch sử -->
+<h3>History</h3>
+<div id="history"></div>
+
+<script src="weather.js"></script>
+</body>
+</html>
