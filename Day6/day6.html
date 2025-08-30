@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+      import { v4 as uuidv4 } from "https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/esm-browser/index.js";
+      window.uuidv4 = uuidv4;
+    </script>
+
+    <style>
+        .product_creat_form {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .product_creat_form input,
+        .product_creat_form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Firebase</h1>
+    <div class="product_creat_form">
+        <h2>Image URL</h2>
+        <input type="text" placeholder="Enter image URL" id="input_image">
+        <h2>Category</h2>
+        <input type="text" placeholder="Enter category" id="input_category">
+        <h2>Name</h2>
+        <input type="text" placeholder="Enter name" id="input_name">
+        <h2>Description</h2>
+        <textarea name="" placeholder="Enter description" id="input_description"></textarea>
+        <h2>Price</h2>
+        <input type="text" placeholder="Enter price" id="input_price">
+        <hr>
+        <button id="addBtn">Add</button>
+    </div>
+    <button id="getAllBtn">Get all buttons</button>
+    <div class="productList"></div>
+    <script type="module" src="./day6.js"></script>
+</body>
+</html>
